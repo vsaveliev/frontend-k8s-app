@@ -5,7 +5,7 @@ RUN apk add --update nginx && rm -rf /var/cache/apk/*
 
 # Copy basic files
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY /build /var/www
+COPY /dist /var/www
 
 EXPOSE 8080
 

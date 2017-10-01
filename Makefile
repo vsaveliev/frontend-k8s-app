@@ -36,7 +36,7 @@ all: build
 
 .PHONY: vendor
 vendor: clean
-	npm update
+	npm install
 
 .PHONY: build
 build: vendor test certs
@@ -108,4 +108,5 @@ test: vendor
 
 .PHONY: clean
 clean: stop rm
-	@rm -rf build/
+	@rm -rf dist/
+	@rm -rf node_modules/
